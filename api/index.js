@@ -58,7 +58,8 @@ app.get('/identify', async (req, res) => {
   
   try {
     const response = await fetch(baseUrl+query, options);
-    result = await response.json();
+    //result = await response.json();
+    result = process.env.API_KEY;
     res.json(result);
   } catch (error) {
     res.json(error);
