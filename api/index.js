@@ -7,7 +7,7 @@ app.get("/", (req, res) => res.send("Express on Vercel"));
 const options = {
   method: 'GET',
   headers: {
-    'x-rapidapi-key': 'dc2994e1f6msh08332cbc48da963p1f26b2jsn4f679cbcdb5a',
+    'x-rapidapi-key': process.env.API_KEY,
 		'x-rapidapi-host': 'id-tools.p.rapidapi.com'
   }
 };
@@ -58,8 +58,7 @@ app.get('/identify', async (req, res) => {
   
   try {
     const response = await fetch(baseUrl+query, options);
-    //result = await response.json();
-    result = process.env.API_KEY;
+    result = await response.json();
     res.json(result);
   } catch (error) {
     res.json(error);
