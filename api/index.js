@@ -7,7 +7,7 @@ app.get("/", (req, res) => res.send("Express on Vercel"));
 const options = {
   method: 'GET',
   headers: {
-    'x-rapidapi-key': process.env.API_KEY,
+    'x-rapidapi-key': 'dc2994e1f6msh08332cbc48da963p1f26b2jsn4f679cbcdb5a',
 		'x-rapidapi-host': 'id-tools.p.rapidapi.com'
   }
 };
